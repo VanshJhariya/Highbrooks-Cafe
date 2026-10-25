@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Highbrooks Cafe | Coffee, shakes and desserts in Jabalpur</title>
+<meta name="description" content="Great coffee, even better desserts, and a table that stays yours. Two Highbrooks in Jabalpur: Vijay Nagar and Adarsh Nagar.">
+<script>
+  document.documentElement.classList.add('js');
+  if (!matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('anim');
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<header class="bar" id="bar">
+  <div class="wrap nav">
+    <a class="logo" href="#top">The Highbrooks Cafe</a>
+    <div>
+      <a href="#about">About</a><a href="#visit">Visit</a><a href="#menu">Menu</a>
+      <a class="callb mag" href="tel:09131100094">Call us</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+  <section class="hero">
+    <div>
+      <h1 aria-label="Order a frappe. Stay for the room.">
+        <span class="w" style="--i:0"><span>Order</span></span>
+        <span class="w" style="--i:1"><span>a</span></span>
+        <span class="w" style="--i:2"><span>frappe.</span></span>
+        <span class="w" style="--i:3"><span>Stay</span></span>
+        <span class="w" style="--i:4"><span>for</span></span>
+        <span class="w" style="--i:5"><span>the</span></span>
+        <span class="w" style="--i:6"><span>room.</span></span>
+      </h1>
+      <p class="lede" data-reveal style="--d:8">Great coffee, even better desserts, and a table that stays yours as long as the conversation lasts. Two Highbrooks in Jabalpur, most bills between ₹200 and ₹400 a head.</p>
+      <div data-reveal style="--d:10">
+        <a class="btn mag" href="#menu">Build your order</a><a class="btn alt mag" href="#visit">Find a branch</a>
+      </div>
+    </div>
+    <div class="reel" data-par=".06">
+      <video id="tour" src="assets/video/interior-tour.mp4" poster="assets/video/interior-tour-poster.jpg" muted loop playsinline autoplay aria-label="A walk through the cafe"></video>
+    </div>
+  </section>
+
+  <div class="marquee" aria-hidden="true"><div class="track" id="track">
+    <span>Oreo Shake</span><span>Java Chip La Frappe</span><span>Brownie Waffle</span><span>Death Shake</span><span>Caramel Mocha</span><span>Kit Kat Waffle</span><span>Hazelnut Mocha</span><span>Veg Club Sandwich</span><span>Rainbow La Frappe</span><span>Snickers Shake</span>
+  </div></div>
+
+  <section class="sec about" id="about">
+    <div>
+      <h2 data-reveal>A table for whoever you came as.</h2>
+      <p data-reveal style="--d:1">Some days you need a quiet corner and a laptop. Some days it's six friends, one big table and a plate of waffles that disappears in minutes. The Highbrooks makes room for both.</p>
+      <p data-reveal style="--d:2">The coffee is great, the desserts are better, and the room is cozy enough to linger in and polished enough to celebrate in. No wrong reason to walk in.</p>
+      <ul class="come" data-stagger>
+        <li><b>Solo?</b>Bring the laptop. Great coffee does half the work.</li>
+        <li><b>With friends?</b>Groups and university crowds feel at home here.</li>
+        <li><b>With little ones?</b>Kids are welcome, and there are high chairs.</li>
+        <li><b>On a date?</b>Warm light, warm wood, something sweet to share.</li>
+        <li><b>Just breakfast?</b>A coffee and a quick bite, and your day has started.</li>
+      </ul>
+    </div>
+    <div class="pic" data-par=".05"><img src="assets/images/about/about-latte.webp" width="340" height="510" alt="Latte art on a white saucer" loading="lazy"></div>
+  </section>
+
+  <section class="sec" id="visit">
+    <h2 data-reveal>Two branches. Same menu, same welcome.</h2>
+    <div class="two" data-stagger>
+      <article class="card">
+        <h3>Vijay Nagar<small>Shatabdipuram</small></h3>
+        <div class="live"><i class="dot" id="d0"></i><span id="s0"></span></div>
+        <dl>
+          <dt>Hours</dt><dd>11:00 am to 11:00 pm, daily</dd>
+          <dt>Busiest</dt><dd>Friday to Sunday evenings</dd>
+          <dt>Order</dt><dd>Dine in with table service, takeout, delivery</dd>
+          <dt>Offer</dt><dd>Roughly 10% to 15% off via Zomato or Swiggy Dineout</dd>
+        </dl>
+      </article>
+      <article class="card">
+        <h3>Adarsh Nagar<small>Rampur</small></h3>
+        <div class="live"><i class="dot" id="d1"></i><span id="s1"></span></div>
+        <dl>
+          <dt>Hours</dt><dd>10:30 am to 11:45 pm, daily</dd>
+          <dt>Busiest</dt><dd>Weekend afternoons and evenings</dd>
+          <dt>Order</dt><dd>Dine in, takeout, drive-through</dd>
+          <dt>Offer</dt><dd>Flat 10% via Zomato</dd>
+        </dl>
+      </article>
+    </div>
+  </section>
+
+  <section class="sec" id="menu">
+    <h2 data-reveal>Pick what you're having. Watch the bill.</h2>
+    <div class="order">
+      <div data-reveal>
+        <div class="cats" id="cats" role="group" aria-label="Menu section"></div>
+        <div id="items"></div>
+        <p class="note">Prices are from the printed menu. Add 30 g protein to any shake for ₹50.</p>
+      </div>
+      <aside class="bill" aria-live="polite" data-reveal style="--d:2">
+        <h3>Your table</h3>
+        <p class="empty" id="empty">Tap + on anything to start.</p>
+        <div id="lines"></div>
+        <div class="tot"><span>Total</span><strong id="tot">₹0</strong></div>
+        <div class="split" id="split"><span>Split between</span></div>
+        <p class="per" id="per"></p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2 data-reveal>From the bar and the kitchen.</h2>
+    <div class="gal" id="gal">
+      <figure><img src="assets/images/gallery/frappe-grinder.webp" width="340" height="510" alt="Chocolate frappe beside a coffee grinder" loading="lazy"></figure>
+      <figure><img src="assets/images/gallery/leaf-bar.webp" width="680" height="510" alt="The leaf-print bar" loading="lazy"></figure>
+      <figure><img src="assets/images/gallery/coffee-pour.webp" width="340" height="510" alt="Milk poured into a cup of coffee" loading="lazy"></figure>
+      <figure><img src="assets/images/gallery/waffle-icecream.webp" width="382" height="510" alt="Waffles with ice cream and honey" loading="lazy"></figure>
+      <figure><img src="assets/images/gallery/sandwiches-frappe.webp" width="340" height="510" alt="Grilled sandwiches with a frappe" loading="lazy"></figure>
+      <figure><img src="assets/images/gallery/brick-interior.webp" width="382" height="510" alt="Brick and concrete interior" loading="lazy"></figure>
+      <figure><img src="assets/images/gallery/two-shakes.webp" width="680" height="453" alt="Two whipped-cream shakes" loading="lazy"></figure>
+      <figure><img src="assets/images/gallery/pizza-slice.webp" width="413" height="510" alt="Pizza slice being lifted" loading="lazy"></figure>
+      <figure><img src="assets/images/gallery/latte-art.webp" width="680" height="382" alt="Latte art" loading="lazy"></figure>
+      <figure><img src="assets/images/gallery/bar-counter-coffee.webp" width="382" height="510" alt="Black coffee at the bar counter" loading="lazy"></figure>
+      <figure><img src="assets/images/gallery/brownie-sundae.webp" width="680" height="510" alt="Brownie waffle sundae with a frappe" loading="lazy"></figure>
+      <figure><img src="assets/images/gallery/frappe-pizza.webp" width="340" height="510" alt="Frappe with a pizza" loading="lazy"></figure>
+      <figure><img src="assets/images/gallery/storefront.webp" width="680" height="510" alt="The storefront at night" loading="lazy"></figure>
+      <figure><img src="assets/images/gallery/branded-cup.webp" width="382" height="510" alt="Branded cup and napkin" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <section class="sec">
+    <h2 data-reveal>Easy to say yes to.</h2>
+    <div class="good" data-stagger>
+      <div><b>Book a table</b><span>Reservations are accepted, for two or for the whole group.</span></div>
+      <div><b>Park for free</b><span>A free lot and free street parking, with plenty of space.</span></div>
+      <div><b>Step right in</b><span>Wheelchair-accessible entrance, car park and seating.</span></div>
+      <div><b>Sit outside</b><span>Outdoor seating for when the weather is kind.</span></div>
+      <div><b>Pay your way</b><span>Credit and debit cards, plus NFC mobile payments.</span></div>
+      <div><b>Finish sweet</b><span>Waffles start at ₹139. Great dessert is half the reason to come.</span></div>
+    </div>
+    <p class="note">Facilities can vary by branch. Call 09131100094 to confirm before you visit.</p>
+  </section>
+
+  <section class="close" data-reveal>
+    <h2>Your table's ready when you are.</h2>
+    <p>Call to reserve, or just walk in. Either way, the coffee is waiting.</p>
+    <a class="mag" href="tel:09131100094">Call 09131100094</a>
+  </section>
+
+  <footer>
+    <span>The Highbrooks Cafe, Jabalpur · <a href="tel:09131100094">09131100094</a></span>
+    <span>Vijay Nagar (Shatabdipuram) and Adarsh Nagar (Rampur)</span>
+  </footer>
+</main>
+
+<script src="js/main.js"></script>
+</body>
+</html>
